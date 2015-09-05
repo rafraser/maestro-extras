@@ -2,10 +2,10 @@
 Extra plugins for Maestro
 
 What this adds:
-  - !speed - set player speed
-  - !exit  - force a player out of a seat or car
-  - !jump  - set the jump power of a player
-  - !flashlight - enable or disable the ability to use the flashlight
+  - !speed - set player speed - who said Sonic was the fastest thing alive?
+  - !exit  - force a player out of a seat or car - Grand Theft Auto style
+  - !jump  - the space race took a budget cut
+  - !flashlight - perfect for scaring your friends in horror maps
   - !act   - who needs the console to dance?
   - !frags - cheating in PvP made simple
   - !deaths - for those that love to cheat death.
