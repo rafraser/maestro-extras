@@ -50,4 +50,10 @@ maestro.command("act", {"action"}, function(caller, action)
 		caller:ConCommand( "act "..action )
 end, [[The ability to act without using the console.]])
 
+maestro.command("playermodel", {"model"}, function(caller, model)
+		caller:SetModel(model)
+		return false, "set their playermodel to %1"
+end, [[Set your playermodel.]])
+
+
 --Plugin by FluffyXVI 
