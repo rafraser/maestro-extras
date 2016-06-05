@@ -44,11 +44,29 @@ maestro.command("flashlight", {"player:target","boolean:enabled(optional)"}, fun
         return false, "disabled flashlight on %1"
 		
 	end
-end, [[Toggle a player's ability to use the flashlight]])
+end, [[Toggle a player's ability to use the flashlight.]])
 
 maestro.command("act", {"action"}, function(caller, action)
 		caller:ConCommand( "act "..action )
 end, [[The ability to act without using the console.]])
+
+maestro.command("matfix", {}, function(caller)
+		caller:SetMaterial()
+		caller:SetColor( Color(255, 255, 255) )
+		return false, "fixed their material"
+end, [[Fix material and color.]])
+
+maestro.command("getpos", {"accurate:boolean(optional)"}, function(caller, accurate)
+	local pos = caller:GetPos()
+	if !accurate then
+		pos.x = math.floor(pos.x)
+		pos.y = math.floor(pos.y)
+		pos.z = math.floor(pos.z)
+	end
+	
+	caller:ChatPrint( "Vector("..pos.x..", "..pos.y..", "..pos.z..")" )
+	return false
+end, [[Get position and return as a Vector.]])
 
 maestro.command("playermodel", {"model"}, function(caller, model)
 		caller:SetModel(model)
@@ -56,4 +74,4 @@ maestro.command("playermodel", {"model"}, function(caller, model)
 end, [[Set your playermodel.]])
 
 
---Plugin by FluffyXVI 
+--Plugin by FluffyXVI
